@@ -1,0 +1,63 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        
+        bind:
+            ###> PARAMETERS ###
+            
+            ###> exe ###
+            # video converter
+            $ffmpegAbsPath:                 '%env(grin_way_env_is_exists_file:resolve:FFMPEG_ABSOLUTE_PATH)%'
+            # ASCII Art by Text
+            $figletAbsPath:                 '%kernel.project_dir%/bin/exe/figlet/figlet.exe'
+            ###< exe ###
+            
+            ###> regex ###
+            $supportedFfmpegVideoFormats:   '%env(SUPPORTED_FFMPEG_VIDEO_FORMATS)%'
+            $supportedFfmpegAudioFormats:   '%env(SUPPORTED_FFMPEG_AUDIO_FORMATS)%'
+            ###< regex ###
+            
+            $joinTitle:                     '%env(JOIN_TITLE)%'
+            $endTitle:                      '%env(END_TITLE)%'
+            
+            $ffmpegAlgorithmForInputVideo:  '%env(FFMPEG_ALGORITHM_FOR_INPUT_VIDEO)%'
+            $ffmpegAlgorithmForInputAudio:  '%env(FFMPEG_ALGORITHM_FOR_INPUT_AUDIO)%'
+            $ffmpegAlgorithmForOutputVideo: '%env(FFMPEG_ALGORITHM_FOR_OUTPUT_VIDEO)%'
+            
+            $endmarkOutputVideoFilename:    '%env(ENDMARK_OUTPUT_VIDEO_FILENAME)%'
+            
+            $grinWayServiceYearRegex:                 '%grin_way_service.year_regex%'
+            $grinWayServiceYearRegexFull:             '%grin_way_service.year_regex_full%'
+            $grinWayServiceIpV4Regex:                 '%grin_way_service.ip_v4_regex%'
+            $grinWayServiceSlashOfIpRegex:            '%grin_way_service.slash_of_ip_regex%'
+            $progressBarSpin:           '%grin_way_command.progress_bar_spin%'
+            $devLogger:                 '@monolog.logger.grin_way_command.dev_logger'
+            
+            $showFilmHelpInfo:          '%env(SHOW_FILM_HELP_INFO)%'
+            ###< PARAMETERS ###
+            
+            ###> SERVICES ###
+            
+            ###> BUNDLE SERVICES ###
+            $grinWayServiceCarbonFactory: '@grin_way_service.carbon_factory'
+            ###< BUNDLE SERVICES ###
+            
+            $arrayService:          '@App\Service\ArrayService'
+            $stringService:         '@App\Service\StringService'
+            $regexService:          '@App\Service\RegexService'
+            
+            ###> lib services ###
+            $t: '@Symfony\Contracts\Translation\TranslatorInterface'
+            ###< lib services ###
+            
+            ###< SERVICES ###
+        
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'

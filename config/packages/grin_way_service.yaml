@@ -1,0 +1,5 @@
+grin_way_service:
+    locale:                     '%env(LOCALE)%'
+    timezone:                   '%env(TIMEZONE)%'
+    app_env:                    '%env(APP_ENV)%'
+    local_drive_for_test:       '%env(LOCAL_DRIVE_FOR_TEST)%'

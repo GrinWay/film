@@ -1,0 +1,28 @@
+film:
+    join_description:                  "Video in current directory join with audio with the same name (.ext doesn't consider)"
+"###< СПРАВКА ###":                     "###< INFO ###"
+"###> СПРАВКА ###":                     "###> INFO ###"
+"1) Аудио файл должен быть назван в точности как видео файл (расширение не учитывается)":       "1) The audio file must be named exactly like the video file (the extension is not taken into account)"
+"2) Аудио файл должен находится во вложенности не более 1 папки относительно видео":            "2) The audio file must be located in a nesting of no more than 1 folder relative to the video"
+ERROR:                                  ERROR
+ready:                                  ready
+Аудио:                                  Audio
+"Видео с переводами:":                  "Videos with the audio tracks:"
+Видео:                                  Video
+"Всего видео:":                         "All videos:"
+"Для того чтобы к видео был найден нужный аудио файл:":                                         "In order for the desired audio file to be found for the video:"
+"ИТОГ:":                                "CONCLUSION:"
+"Исходные видео и аудио остаются прежними как есть (не изменяются)":        "The original video and audio remain the same as is (not changed)"
+"Программа объёдиняет видео с аудио в новый видео файл":                    "The program combines video with audio into a new video file"
+Результат:                               Result
+"Команда %command% уже запущена для этой директории":                       "The \"%command%\" command is already running for this directory"
+"Для объединённых видео файлов создаётся новая, гарантированно уникальная папка.":              "For merged video files, a new directory will be created, it is guaranteed."
+"Нечего соединять":                      "There is nothing to join"
+"Команда %command% остановлена":         "The command \"%command%\" was stopped"
+"Right":                                 "Right"
+"EXIT":                                  "EXIT"
+"Открывай консоль в месте расположения видео.":     "Open the console at the location of the video."
+error:
+    os:
+        ffmpeg: 'The executable file cannot be used %ffmpeg% for your operational system, see "https://github.com/GrinWay/film#another-operating-system" the section Another Operating System'
+End: "End"

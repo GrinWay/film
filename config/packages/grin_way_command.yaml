@@ -1,0 +1,2 @@
+grin_way_command:
+    app_env: '%env(APP_ENV)%'
