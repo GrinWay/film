@@ -1,3 +1,4 @@
+[YouTube film join command tutorial](https://www.youtube.com/watch?v=7pHSJEABazI&ab_channel=%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B9%D0%9A%D0%BE%D0%B1%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9)
 ![join film](https://github.com/GrinWay/film/blob/main/doc/film%20join%20working.gif)
 
 What's this program about?
