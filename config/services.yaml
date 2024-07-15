@@ -42,7 +42,7 @@ services:
             ###> SERVICES ###
             
             ###> BUNDLE SERVICES ###
-            $grinWayServiceCarbonFactory: '@grin_way_service.carbon_factory'
+            $grinWayServiceCarbonFactory: '@grin_way_service.carbon_factory_immutable'
             ###< BUNDLE SERVICES ###
             
             $arrayService:          '@App\Service\ArrayService'
