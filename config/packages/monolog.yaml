@@ -10,7 +10,7 @@ monolog:
             max_files:  3
             level:      debug
             channels:   [deprecation]
-            path:       "%kernel.logrin_way_dir%/%kernel.environment%.deprecation.log"
+            path:       "%kernel.logs_dir%/%kernel.environment%.deprecation.log"
 
         dev:
             type:           fingers_crossed
@@ -22,12 +22,12 @@ when@dev:
             grin_way_command.dev_logger:
                 type:           rotating_file
                 max_files:      1
-                path:           "%kernel.logrin_way_dir%/grin_way_command_%kernel.environment%.log"
+                path:           "%kernel.logs_dir%/grin_way_command_%kernel.environment%.log"
                 level:          debug
                 channels:       ["grin_way_command.dev_logger"]
             main:
                 type: stream
-                path: "%kernel.logrin_way_dir%/%kernel.environment%.log"
+                path: "%kernel.logs_dir%/%kernel.environment%.log"
                 level: debug
                 channels: ["!event"]
             
@@ -54,7 +54,7 @@ when@test:
                 channels: ["!event"]
             nested:
                 type: stream
-                path: "%kernel.logrin_way_dir%/%kernel.environment%.log"
+                path: "%kernel.logs_dir%/%kernel.environment%.log"
                 level: debug
 
 when@prod:
