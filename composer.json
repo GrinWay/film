@@ -12,6 +12,7 @@
         "grinway/command-bundle": "1.1.1",
         "grinway/service-bundle": "1.0.0",
         "grinway/env-processor-bundle": "1.0.0",
+        "fzaninotto/faker": "dev-bugfix",
         "nesbot/carbon": "^2.68",
         "symfony/console": "6.3.*",
         "symfony/dotenv": "6.3.*",
@@ -85,6 +86,10 @@
 		{
 			"type": "path",
 			"url": "./bundles/grinway/env-processor-bundle"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/GrinWay/Faker.git"
 		}
 	]
 }

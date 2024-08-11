@@ -29,10 +29,10 @@ services:
             
             $endmarkOutputVideoFilename:    '%env(ENDMARK_OUTPUT_VIDEO_FILENAME)%'
             
-            $grinWayServiceYearRegex:                 '%grin_way_service.year_regex%'
-            $grinWayServiceYearRegexFull:             '%grin_way_service.year_regex_full%'
-            $grinWayServiceIpV4Regex:                 '%grin_way_service.ip_v4_regex%'
-            $grinWayServiceSlashOfIpRegex:            '%grin_way_service.slash_of_ip_regex%'
+            #$grinWayServiceYearRegex:                 '%grin_way_service.year_regex%'
+            #$grinWayServiceYearRegexFull:             '%grin_way_service.year_regex_full%'
+            #$grinWayServiceIpV4Regex:                 '%grin_way_service.ip_v4_regex%'
+            #$grinWayServiceSlashOfIpRegex:            '%grin_way_service.slash_of_ip_regex%'
             $progressBarSpin:           '%grin_way_command.progress_bar_spin%'
             $devLogger:                 '@monolog.logger.grin_way_command.dev_logger'
             
