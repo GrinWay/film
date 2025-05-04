@@ -1,0 +1,28 @@
+grinway_service:
+
+    database:
+        # Required (when prod: it's the database ip, when dev: docker container DSN when it's named network)
+        ip: '%env(APP_DATABASE_IP)%'
+        # Required
+        database_name: '%env(APP_DATABASE_NAME)%'
+        # Required
+        port: '%env(APP_DATABASE_PORT)%'
+        # Required
+        user: '%env(APP_DATABASE_USER)%'
+        # Required
+        backup_abs_dir: '%env(resolve:APP_DATABASE_BACKUP_ABS_PATH)%'
+
+    doctrine:
+        event_listeners:
+            # Optional
+            enabled: false
+
+    currency:
+        # Required
+        fixer_api_key: '%env(APP_CURRENCY_FIXER_API_KEY)%'
+
+when@test:
+    grinway_service:
+        database:
+            # REQUIRED ONLY WHEN TEST
+            password: '%env(APP_TEST_DATABASE_PASSWORD)%'

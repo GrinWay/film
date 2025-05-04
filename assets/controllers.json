@@ -1,0 +1,14 @@
+{
+    "controllers": {
+        "@grinway/service-bundle": {
+            "service": {
+                "enabled": true,
+                "fetch": "eager",
+                "autoimport": {
+                    "@grinway/service/dist/style/main.scss": false
+                }
+            }
+        }
+    },
+    "entrypoints": []
+}

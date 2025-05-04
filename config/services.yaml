@@ -1,0 +1,35 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        
+        bind:
+            ###> PARAMETERS ###
+            
+            ###> exe ###
+            # video converter
+            $ffmpegAbsPath:                 '%env(resolve:FFMPEG_ABSOLUTE_PATH)%'
+            ###< exe ###
+            
+            ###> regex ###
+            $supportedFfmpegVideoFormats:   '%env(SUPPORTED_FFMPEG_VIDEO_FORMATS)%'
+            $supportedFfmpegAudioFormats:   '%env(SUPPORTED_FFMPEG_AUDIO_FORMATS)%'
+            ###< regex ###
+            
+            $ffmpegAlgorithmForInputVideo:  '%env(FFMPEG_ALGORITHM_FOR_INPUT_VIDEO)%'
+            $ffmpegAlgorithmForInputAudio:  '%env(FFMPEG_ALGORITHM_FOR_INPUT_AUDIO)%'
+            $ffmpegAlgorithmForOutputVideo: '%env(FFMPEG_ALGORITHM_FOR_OUTPUT_VIDEO)%'
+            
+            $endmarkOutputVideoFilename:    '%env(ENDMARK_OUTPUT_VIDEO_FILENAME)%'
+            
+            $showFilmHelpInfo:          '%env(SHOW_FILM_HELP_INFO)%'
+            ###< PARAMETERS ###
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
